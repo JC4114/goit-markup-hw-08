@@ -16,7 +16,6 @@
 </head>
 
 <body>
-  <!-- Шапка -->
   <header class="header">
     <div class="container header__section">
       <nav class="header__nav">
@@ -49,21 +48,54 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <button class="menu-open" data-menu-open>
+        <svg class="menu-burger" width="24" height="16">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mob-menu flex is-hidden" data-menu>
+      <div>
+        <button class="menu-close" data-menu-close>
+          <svg class="menu-close" width="40" height="40">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-list__item">
+            <a class="mob-menu-list__link link mob-menu-list__link--current" href="./index.html">Студія</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a class="mob-menu-list__link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a class="mob-menu-list__link link" href="">Контакти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mob-menu-list__down">
+        <a class="mob-menu-list__tell link" href="tel:+380961111111">
+          +38 096 111 11 11</a>
+        <a class="mob-menu-list__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        <ul class="mob-menu-list__social list">
+          <li class="mob-menu-list__social-item">Instagram</li>
+          <li class="mob-menu-list__social-item">Twitter</li>
+          <li class="mob-menu-list__social-item">Facebook</li>
+          <li class="mob-menu-list__social-item">LinkedIn</li>
+        </ul>
+      </div>
     </div>
   </header>
-  <!-- Основной контент -->
+
   <main>
-    <!-- Герой -->
     <section class="hero">
       <h1 class="hero__title">Ефективні рішення для вашего бізнесу</h1>
       <button class="hero__btn" type="button" data-modal-open>Замовити послугу</button>
     </section>
-    <!-- Список преимуществ -->
     <section class="features">
       <div class="container">
-        <!-- h2 Преимущества спрятать в css правильно -->
         <h2 class="visually-hidden">Привілегії</h2>
-        <ul class="features-list list">
+        <ul class="features-list features-flex list">
           <li class="features-list__item">
             <div class="features-list__icon-fon">
               <svg class="features-list__icon" width="70" height="70">
@@ -115,35 +147,56 @@
         </ul>
       </div>
     </section>
-    <!-- Список занятий -->
     <section class="work">
       <div class="container">
         <h2 class="work__title section-title">Чим ми займаємося</h2>
         <ul class="work-list list">
           <li class="work-list__item">
-            <img src="./images/box1.jpg" alt="робітник створює программу" width="370" height="294" />
+            <img srcset="
+                  ./images/skills/img.jpg 1x,                   
+                  ./images/skills/img-2x.jpg 2x
+                  " src="./images/skills/img.jpg" alt="фото ноутбука" width="370" />
             <p class="work-list__text">Десктопні додатки</p>
           </li>
           <li class="work-list__item">
-            <img src="./images/box2.jpg" alt="працівник вибирає додаток" width="370" height="294" />
+            <img srcset="
+                  ./images/skills/box.jpg 1x,                   
+                  ./images/skills/box-2x.jpg 2x
+                  " src="./images/skills/box.jpg" alt="фото мобільного" width="370" />
             <p class="work-list__text">Мобільні додатки</p>
           </li>
           <li class="work-list__item">
-            <img src="./images/box3.jpg" alt="веб-дизайнер выбирає палітру" width="370" height="294" />
-            <p class="work-list__text">Дизайнерські рішення</p>
+            <img srcset="
+                  ./images/skills/tv.jpg 1x,                   
+                  ./images/skills/tv-2x.jpg 2x
+                  " src="./images/skills/tv.jpg" alt="фото планшета" width="370" />
+            <p class="work-list__text">Дизайнерскі рішення</p>
           </li>
         </ul>
       </div>
     </section>
-    <!-- Команда -->
     <section class="team">
       <div class="container">
         <h2 class="team__title section-title">Наша команда</h2>
         <ul class="team-list list">
           <li class="team-list__item">
-            <img src="./images/img1.jpg" alt="фото Ігоря Дем'яненко" width="270" height="260" />
+
+            <picture>
+              <source srcset="./images/desktop-product-designer.jpg 1x,
+                    ./images/desktop-product-designer-2x.jpg 2x" media="(min-width: 1200px)" />
+
+              <source srcset="./images/tablet-product-designer.jpg 1x,                   
+                    ./images/tablet-product-designer-2x.jpg 2x" media="(max-width: 1199px)" />
+
+              <source srcset="./images/mobile-product-designer.jpg 1x,                   
+                    ./images/mobile-product-designer-2x.jpg 2x" media="(max-width: 767px)" />
+
+              <img class="photo thumb-team" src="./images/mobile-product-designer.jpg" alt="фото Ігоря Демьяненко"
+                width="450" />
+            </picture>
+
             <div class="team-list__workers">
-              <h3 class="team-list__worker">Ігор Дем'яненко</h3>
+              <h3 class="team-list__worker">Ігорь Демьяненко</h3>
               <p class="team-list__profession" lang="en">Product Designer</p>
               <ul class="team-list__social-list list">
                 <li class="team-list__social-item">
@@ -182,9 +235,21 @@
           </li>
 
           <li class="team-list__item">
-            <img src="./images/img2.jpg" alt="фото Ольги Рєпіной" width="270" height="260" />
+            <picture>
+              <source srcset="./images/desktop-frontend-developer.jpg 1x,                   
+              ./images/desktop-frontend-developer-2x.jpg 2x" media="(min-width:1200px)" />
+
+              <source srcset="./images/tablet-frontend-developer.jpg 1x,                   
+              ./images/tablet-frontend-developer-2x.jpg 2x" media="(max-width:1199px)" />
+
+              <source srcset="./images/mobile-frontend-developer.jpg 1x,                   
+              ./images/mobile-frontend-developer-2x.jpg 2x" media="(max-width:767px)" />
+
+              <img src="./images/mobile-frontend-developer.jpg" class="photo thumb-team" alt="фото Ольга Рєпина"
+                width="450" />
+            </picture>
             <div class="team-list__workers">
-              <h3 class="team-list__worker">Ольга Рєпіна</h3>
+              <h3 class="team-list__worker">Ольга Рєпина</h3>
               <p class="team-list__profession" lang="en">Frontend Developer</p>
               <ul class="team-list__social-list list">
                 <li class="team-list__social-item">
@@ -222,7 +287,18 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img src="./images/img3.jpg" alt="фото Миколи Тарасова" width="270" height="260" />
+            <picture>
+              <source srcset="./images/desktop-marketing.jpg 1x,                 
+                    ./images/desktop-marketing-2x.jpg 2x" media="(min-width:1200px)" />
+
+              <source srcset="./images/tablet-marketing.jpg 1x,                 
+                    ./images/tablet-marketing-2x.jpg 2x" media="(min-width:768px)" />
+
+              <source srcset="./images/mobile-marketing.jpg 1x,                 
+                    ./images/mobile-marketing-2x.jpg 2x" media="(max-width:767px)" />
+              <img class="photo thumb-team" src="./images/mobile-marketing.jpg" alt="фото Миколи Тарасова"
+                width="450" />
+            </picture>
             <div class="team-list__workers">
               <h3 class="team-list__worker">Микола Тарасов</h3>
               <p class="team-list__profession" lang="en">Marketing</p>
@@ -262,9 +338,20 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img src="./images/img4.jpg" alt="фото Михайла Єрмакова" width="270" height="260" />
+            <picture>
+              <source srcset="./images/desktop-ui-designer.jpg 1x,                   
+                    ./images/desktop-ui-designer-2x.jpg 2x" media="(min-width:1200px)" />
+
+              <source srcset="./images/tablet-ui-designer.jpg 1x,                   
+                    ./images/tablet-ui-designer-2x.jpg 2x" media="(max-width:1199px)" />
+              <source srcset="./images/mobile-ui-designer.jpg 1x,                   
+                    ./images/mobile-ui-designer-2x.jpg 2x" media="(max-width:767px)" />
+
+              <img class="photo thumb-team" src="./images/mobile-ui-designer.jpg" alt="фото Михаила Єрмакова"
+                width="450" />
+            </picture>
             <div class="team-list__workers">
-              <h3 class="team-list__worker">Михайло Єрмаков</h3>
+              <h3 class="team-list__worker">Михаило Єрмаков</h3>
               <p class="team-list__profession" lang="en">UI Designer</p>
               <ul class="team-list__social-list list">
                 <li class="team-list__social-item">
@@ -304,10 +391,9 @@
         </ul>
       </div>
     </section>
-    <!-- Клиенты -->
     <section class="client">
       <div class="container">
-        <h2 class="client__title">Постійні клієнти</h2>
+        <h2 class="client__title">Постійнні клиенти</h2>
         <ul class="client__list customers list">
           <li class="customers__item">
             <a class="customers__link link" href="">
@@ -360,14 +446,13 @@
       </div>
     </section>
   </main>
-  <!-- Подвал -->
   <footer class="footer">
     <div class="container">
       <div class="footer__flex">
+
         <div class="footer__contacts-flex">
           <a class="footer__logo logo link" href="./index.html">Web<span class="footer__logo--white">Studio</span>
           </a>
-          <!-- Список контактов -->
           <address class="footer-contact">
             <ul class="footer-contact__list list">
               <li class="footer-contact__item">
@@ -424,15 +509,14 @@
           <p class="footer-submit__text">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
           <div class="footer-submit__form">
             <label class="footer-submit__label" for="submit-mail"></label>
-            <input class="footer-submit__input" type="email" name="submit-mail" id="submit-mail" placeholder="E-mail"
-              required>
+            <input class="footer-submit__input" type="email" name="submit-mail" id="submit-mail" placeholder="E-mail">
             <button class="footer-submit__btn" type="submit">Підписатися</button>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  <!-- MODAL WINDOW -->
+
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button type="button" class="close-btn" data-modal-close>
@@ -445,24 +529,22 @@
         <span class="form-title">Залиште свої дані, ми вам передзвонимо</span>
 
         <div class="form-field top-title">
-          <label class="form-label" for="name">Ім'я</label>
-          <input class="form-input" type="text" name="name" id="name" placeholder="Володимир" minlength="2"
-            maxlength="30" required>
+          <label class="form-label" for="name">Имя</label>
+          <input class="form-input" type="text" name="name" id="name">
           <svg class="input-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-name"></use>
           </svg>
         </div>
         <div class="form-field">
           <label class="form-label" for="tel">Телефон</label>
-          <input class="form-input" type="tel" name="tel" id="tel" placeholder="+380......." minlength="9"
-            maxlength="13" required />
+          <input class="form-input" type="tel" name="tel" id="tel">
           <svg class="input-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-tel"></use>
           </svg>
         </div>
         <div class="form-field">
           <label class="form-label" for="email">Пошта</label>
-          <input class="form-input" type="email" name="email" id="email" placeholder="Email" required>
+          <input class="form-input" type="email" name="email" id="email">
           <svg class="input-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-mail"></use>
           </svg>
@@ -473,17 +555,19 @@
         </div>
         <div class="form-field-chek">
 
-          <label class="policy-label" for="policy">
-          <input class="form-checkbox" type="checkbox" name="policy" id="policy">
-          <span class="icon-chek"></span>
-          Погоджуюся з розсилкою та приймаю <a class="policy-link" href="">Умови договору</a>
+          <label class="policy-label" for="policy"></a>
+            <input class="form-checkbox" type="checkbox" name="policy" id="policy">
+            <span class="icon-chek"></span>
+            Погоджуюся з розсилкою та приймаю <a class="policy-link" href="">Умови договору</a>
           </label>
 
         </div>
         <button class="form-btn" type="submit">Відправити</button>
       </form>
     </div>
-    <script src="./js/modal.js"></script>
+  </div>
+  <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

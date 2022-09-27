@@ -1,13 +1,14 @@
 body {
   font-family:$mainFont;
   letter-spacing: 0.03em;
-  background-color: $white-background-color;
-  color: $primary-text-color;
+  background-color: var(--white-background-color);
+  color: var(--primary-text-color);
 }
 
 .list {
- list-style: none;
+  list-style: none;
 }
+
 .link {
   text-decoration: none;
 }
@@ -22,4 +23,10 @@ p,
 ul {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

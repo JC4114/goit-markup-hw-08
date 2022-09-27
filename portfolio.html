@@ -25,7 +25,7 @@
             <a class="nav__link link" href="./index.html">Студія</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link link nav__link--current link" href="./portfolio.html">Портфоліо</a>
+            <a class="nav__link link nav__link--current" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="nav__item">
             <a class="nav__link link" href="">Контакти</a>
@@ -48,6 +48,42 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <button class="menu-open" data-menu-open>
+        <svg class="menu-burger" width="24" height="16">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mob-menu flex is-hidden" data-menu>
+      <div>
+        <button class="menu-close" data-menu-close>
+          <svg class="menu-close" width="40" height="40">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-list__item">
+            <a class="mob-menu-list__link link " href="./index.html">Студія</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a class="mob-menu-list__link link mob-menu-list__link--current" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a class="mob-menu-list__link link" href="">Контакти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mob-menu-list__down">
+        <a class="mob-menu-list__tell link" href="tel:+380961111111">
+          +38 096 111 11 11</a>
+        <a class="mob-menu-list__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        <ul class="mob-menu-list__social list">
+          <li class="mob-menu-list__social-item">Instagram</li>
+          <li class="mob-menu-list__social-item">Twitter</li>
+          <li class="mob-menu-list__social-item">Facebook</li>
+          <li class="mob-menu-list__social-item">LinkedIn</li>
+        </ul>
+      </div>
     </div>
   </header>
   <!-- Основной контент -->
@@ -77,7 +113,20 @@
         <ul class="portfolio-list list">
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/tehno.jpg" alt="відкритий ноутбук з сайтом Технокряк" width="370" height="294" />
+
+              <picture>
+                <source srcset="./images/project/desktop/project1-l.jpg 1x,                   
+                ./images/project/desktop/project1-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project1-m.jpg 1x,                   
+                ./images/project/tablet/project1-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project1-s.jpg 1x,                   
+                ./images/project/mob/project1-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project1-s.jpg" alt="відкритий ноутбук з сайтом Технокряк" width="450" />
+              </picture>
+
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -92,7 +141,18 @@
           </li>
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/poster.jpg" alt="хлопці грають в баскетбол" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project2-l.jpg 1x,                   
+                ./images/project/desktop/project2-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project2-m.jpg 1x,                   
+                ./images/project/tablet/project2-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project2-s.jpg 1x,                   
+                ./images/project/mob/project2-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project2-s.jpg" alt="хлопці грають в баскетбол" width="450" />
+              </picture>
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -110,7 +170,19 @@
 
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/seafood.jpg" alt="логотип ресторана Seafood" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project3-l.jpg 1x,                   
+                   ./images/project/desktop/project3-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project3-m.jpg 1x,                   
+                   ./images/project/tablet/project3-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project3-s.jpg 1x,                   
+                   ./images/project/mob/project3-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project3-s.jpg" alt="логотип ресторана Seafood" width="450" />
+
+              </picture>
               <div class="portfolio-overlay">
 
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -127,7 +199,19 @@
 
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/prime.jpg" alt="навушники" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project4-l.jpg 1x,                   
+                    ./images/project/desktop/project4-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project4-m.jpg 1x,                   
+                    ./images/project/tablet/project4-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project4-s.jpg 1x,                   
+                    ./images/project/mob/project4-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project4-s.jpg" alt="навушники" width="450" />
+
+              </picture>
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -143,7 +227,19 @@
 
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/boxes.jpg" alt="дві коробки" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project5-l.jpg 1x,                   
+                    ./images/project/desktop/project5-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project5-m.jpg 1x,                   
+                   ./images/project/tablet/project5-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project5-s.jpg 1x,                   
+                   ./images/project/mob/project5-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project5-s.jpg" alt="дві коробки" width="450" />
+
+              </picture>
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -159,7 +255,19 @@
 
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/monitor.jpg" alt="компьютерний монітор" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project6-l.jpg 1x,                   
+                   ./images/project/desktop/project6-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project6-m.jpg 1x,                   
+                    ./images/project/tablet/project6-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project6-s.jpg 1x,                   
+                  ./images/project/mob/project7-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project6-s.jpg" alt="компьютерний монітор" width="450" />
+
+              </picture>
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -168,14 +276,26 @@
               </div>
             </div>
             <div class="portfolio-border">
-              <h2 class="portfolio-list-title"><span>Inspiration has no Borders</span></h2>
-              <p class="portfolio-list-text">Веб-сайт</p>
+              <h2 class="portfolio-list-title"><span lang="en">Inspiration has no Borders</span< /h2>
+                  <p class="portfolio-list-text">Веб-сайт</p>
             </div>
           </li>
 
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/limited.jpg" alt="відкритый журнал" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project7-l.jpg 1x,                   
+                  ./images/project/desktop/project7-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project7-m.jpg 1x,                   
+                   ./images/project/tablet/project7-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project7-s.jpg 1x,                   
+                  ./images/project/mob/project7-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project7-s.jpg" alt="відкритий журнал" width="450" />
+
+              </picture>
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -184,14 +304,26 @@
               </div>
             </div>
             <div class="portfolio-border">
-              <h2 class="portfolio-list-title">Видавництво <span lang="en">Limited Edition</span></h2>
+              <h2 class="portfolio-list-title">Издание <span lang="en">Limited Edition</span></h2>
               <p class="portfolio-list-text">Дизайн</p>
             </div>
           </li>
 
           <li class="portfolio-item">
             <div class="portfolio-description">
-              <img src="./images/lab.jpg" alt="етикетка LAB" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project8-l.jpg 1x,                   
+                  ./images/project/desktop/project8-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project8-m.jpg 1x,                   
+                  ./images/project/tablet/project8-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project8-s.jpg 1x,                   
+                 ./images/project/mob/project8-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project8-s.jpg" alt="етикетка LAB" width="450" />
+
+              </picture>
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -207,7 +339,19 @@
 
           <li class="portfolio-item border">
             <div class="portfolio-description">
-              <img src="./images/growing.jpg" alt="людина працює за макбуком" width="370" height="294" />
+              <picture>
+                <source srcset="./images/project/desktop/project9-l.jpg 1x,                   
+                    ./images/project/desktop/project9-l@2x.jpg 2x" media="(min-width:1200px)" />
+
+                <source srcset="./images/project/tablet/project9-m.jpg 1x,                   
+                  ./images/project/tablet/project9-m@2x.jpg 2x" media="(max-width:1199px)" />
+
+                <source srcset="./images/project/mob/project9-s.jpg 1x,                   
+                  ./images/project/mob/project9-s2@x.jpg 2x" media="(max-width:767px)" />
+
+                <img src="./images/project/mob/project9-s.jpg" alt="людина працює за макбуком" width="450" />
+
+              </picture>
               <div class="portfolio-overlay">
                 <p class="portfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates suscipit pariatur dolor qui
@@ -217,21 +361,21 @@
             </div>
             <div class="portfolio-border">
               <h2 class="portfolio-list-title"><span lang="en">Growing Business</span></h2>
-              <p class="portfolio-list-text">Додатки</p>
+              <p class="portfolio-list-text">Додаток</p>
             </div>
           </li>
         </ul>
       </div>
     </section>
   </main>
-  <!-- Подвал -->
+
   <footer class="footer">
     <div class="container">
       <div class="footer__flex">
         <div class="footer__contacts-flex">
           <a class="footer__logo logo link" href="./index.html">Web<span class="footer__logo--white">Studio</span>
           </a>
-          <!-- Список контактов -->
+
           <address class="footer-contact">
             <ul class="footer-contact__list list">
               <li class="footer-contact__item">
@@ -288,15 +432,14 @@
           <p class="footer-submit__text">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
           <div class="footer-submit__form">
             <label class="footer-submit__label" for="submit-mail"></label>
-            <input class="footer-submit__input" type="email" name="submit-mail" id="submit-mail" placeholder="E-mail"
-              required>
+            <input class="footer-submit__input" type="email" name="submit-mail" id="submit-mail" placeholder="E-mail">
             <button class="footer-submit__btn" type="submit">Підписатися</button>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

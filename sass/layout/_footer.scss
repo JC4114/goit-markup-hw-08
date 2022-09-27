@@ -1,21 +1,33 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  text-align: center;
+  padding: 60px 0px;
 
-  background-color: $hero-background-color;
+  background-color: var(--hero-background-color);
 }
 
 .footer__flex {
-  display: flex;
-
+  display: block;
   margin: 0;
-  padding: 0;
+  padding: 0px;
   list-style: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 165px;
+  }
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 70px;
+  }
 }
 
 .footer__logo {
   &--white {
-    color: $white-text-color;
+    color: var(--white-text-color);
   }
 }
 
@@ -23,19 +35,11 @@
   margin-top: 20px;
 }
 .footer-contact__address {
-  color: $white-background-color;
+  color: var(--white-text-color);
 }
 
 .footer-contact__item {
   margin-top: 9px;
-  &:not(:first-child) .footer-contact__link {
-      color: $footer-text-color;
-        &:hover,
-        &:focus {
-            color: $accent-color;
-        
-          }
-    }
 }
 
 .footer-contact__link {
@@ -43,20 +47,25 @@
   font-size: 14px;
   line-height: 1.71;
 
-  // &:not(:first-child){color: $footer-text-color;}
+  color: var(--footer-text-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    color: $accent-color;
-    
+    color: var(--accent-color);
   }
 }
 
 .social-section {
-  margin-left: 80px;
-  width: 206px;
+  display: block;
+
+  margin-top: 60px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  }
 }
 
 .social-section__text {
@@ -67,13 +76,20 @@
   line-height: 1.14px;
   text-transform: uppercase;
 
-  color: $white-text-color;
+  color: var(--white-text-color);
+
+  @media (min-width: 768px) {
+    padding-bottom: 10px;
+  }
+  @media (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 
   padding: 0;
   margin-top: 0;
@@ -83,10 +99,11 @@
 .footer-list__item {
   width: 44px;
   height: 44px;
+  margin-right: 10px;
 }
 
 .footer-list__link {
-  display: block;
+  display: flex;
 
   width: 44px;
   height: 44px;
@@ -101,7 +118,7 @@
   &:hover,
   &:focus {
     color: #ffffff;
-    background-color: $accent-color;
+    background-color: var(--accent-color);
   }
 }
 
@@ -111,7 +128,15 @@
 }
 
 .footer-submit {
-  margin-left: 93px;
+  margin-top: 60px;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+    padding: 0;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 23px;
+  }
 }
 
 .footer-submit__text {
@@ -122,28 +147,31 @@
   line-height: 1.14px;
   text-transform: uppercase;
 
-  color: $white-text-color;
+  color: var(--white-text-color);
 }
 
 .footer-submit__input {
-  width: 358px;
+  margin-bottom: 20px;
+
+  width: 100%;
   margin: 0;
   padding: 13px 16px;
   border-radius: 4px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: $hero-background-color;
-  color: $white-text-color;
-outline: none;
-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--hero-background-color);
+  color: var(--white-text-color);
+
   &::placeholder {
     font-size: 16px;
     line-height: 1.25;
 
     color: rgba(255, 255, 255, 0.6);
   }
-  &:focus{
-    border-color: $accent-color;
+
+  @media (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
   }
 }
 
@@ -153,13 +181,13 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   justify-content: center;
 
   border: none;
-  margin: 0;
+  margin-top: 20px;
   padding: 8px 29px;
   border-radius: 4px;
 
-  background-color: $accent-color;
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: $white-text-color;
+  color: var(--white-text-color);
 
   font-family: $mainFont;
   font-style: normal;
@@ -170,7 +198,10 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   cursor: pointer;
   min-height: 43px;
-  margin-left: 12px;
+
+  @media (min-width: 1200px) {
+    margin-top: 0px;
+  }
 
   &::after {
     content: "";
